@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎉 Bankosa Party Media Hub</title>
+     <link rel="icon" type="image/png" href="favicon-32x32.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('bankosa.jpg');
+        }
+
+/* ==== LOGO WATERMARK ==== */
+body::after {
+    content: "";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-25deg);
+    width: 600px; /* Adjust size */
+    height: auto;
+    background: url('bankosa.jpg') center/contain no-repeat;
+    opacity: 1.06; /* Very subtle */
+    pointer-events: none;
+    z-index: -1;
+    background-size: contain;
+}
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        
+        .header {
+            background: linear-gradient(45deg, #ff6b6b, #feca57);
+            color: white;
+            padding: 40px 20px;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .confetti {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background-color: #fff;
+            border-radius: 50%;
+            animation: fall 5s linear infinite;
+            opacity: 0.7;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(800px) rotate(720deg); opacity: 0; }
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            margin: 25px 0;
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 107, 107, 0.6);
+        }
+
+        .feedback-section {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px dashed #eee;
+        }
+
+        .feedback-section h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #555;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e1e8ed;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+
+        .submit-btn {
+            background: #3498db;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #2980b9;
+        }
+
+        .footer {
+            padding: 20px;
+            background: #f8f9fa;
+            color: #6c757d;
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            .download-btn {
+                padding: 12px 30px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="header">
+            <h1>🎉 Bankosa Memories</h1>
+            <p>Relive the fun — download your party photos & videos!</p>
+            <!-- Confetti effect (optional JS later) -->
+            <div class="confetti" style="left: 10%; animation-delay: 0s;"></div>
+            <div class="confetti" style="left: 30%; animation-delay: 1s; background: #ff6b6b;"></div>
+            <div class="confetti" style="left: 50%; animation-delay: 2s; background: #feca57;"></div>
+            <div class="confetti" style="left: 70%; animation-delay: 3s; background: #1dd1a1;"></div>
+            <div class="confetti" style="left: 90%; animation-delay: 4s; background: #54a0ff;"></div>
+        </div>
+
+        <div class="content">
+            <p>Everything captured at the party is packed in one ZIP file — ready for you to enjoy, share, and cherish!</p>
+
+            <!-- Replace 'party-media.zip' with your actual file -->
+            <a href="https://www.dropbox.com/scl/fo/wav87xn90256jv2wwmn4t/AOwLUspYj6YSJtT8lhUHZAU?rlkey=no0oxbt4npnjvbvwdtwnpsalk&dl=1" class="download-btn" download>
+                <i class="fas fa-download"></i> Download All Photos (ZIP)
+            </a>
+
+            <br> <br><br> 
+            <a href="https://www.dropbox.com/scl/fo/zdbjhuu975jp1x1f77yej/AJrIEs-828o9sxOQxzPFr8E?rlkey=vmzw5iw7zk41wf8kmgavzttfz&dl=1" class="download-btn" download>
+                <i class="fas fa-download"></i> Download All Videos (ZIP)
+            </a>
+
+            <div class="feedback-section">
+                <h3>💌 Loved the party? Tell us!</h3>
+                <p>Your feedback helps us throw even better parties next time.</p>
+
+                <!-- Formspree Form -->
+                <form action="https://formspree.io/f/mrbyzbdz" method="POST">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" name="name" id="name" class="form-control" placeholder="e.g. Namukwaya Teddy" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" name="email" id="email" class="form-control" placeholder="you@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Feedback or Message</label>
+                        <textarea name="message" id="message" class="form-control" rows="4" placeholder="What was your favorite moment? Any suggestions?" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Feedback</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer">
+            Made with ❤ for Bankosa members • Questions? Email us
+        </div>
+    </div>
+
+    <script>
+        // Optional: Add more confetti dynamically
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.querySelector('.header');
+            for (let i = 0; i < 20; i++) {
+                const confetti = document.createElement('div');
+                confetti.classList.add('confetti');
+                confetti.style.left = Math.random() * 100 + '%';
+                confetti.style.animationDelay = Math.random() * 5 + 's';
+                confetti.style.background = ['#ff6b6b', '#feca57', '#1dd1a1', '#54a0ff', '#ff9ff3'][Math.floor(Math.random() * 5)];
+                header.appendChild(confetti);
+            }
+        });
+    </script>
+
+</body>
+</html>
